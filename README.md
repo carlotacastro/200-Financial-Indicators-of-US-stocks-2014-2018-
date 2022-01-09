@@ -35,13 +35,13 @@ L'objectiu del dataset és aprendre a predir si una acció de la borse americana
 ## Experiments
 Durant aquesta pràctica hem realitzat diferents experiments.
 ### Preprocessat
-El primer que he realiztat ha estat la neteja de les dades donat que es tracta d'un dataset molt extens. Per a portar aquesta acció a terme he realitzat diferent mètodes:
+El primer que he realiztat ha estat la neteja de les dades  de cadascun dels datasets per separat donat que es tracta d'un dataset molt extens. Per a portar aquesta acció a terme he realitzat diferent mètodes:
 1. El primer que fem es mrar PREU VAR % per tal de veure quines accions han tingut un creixement inorgànic de més de 500% i els eliminem.
 2. Eliminem aquells valors que siguin buits(nans més del 50%) o tinguing una gran quantitat de zeros (més del 60% en el nostre cas)
 3. Ens encarreguem també de les dades amb valors extrems (outliers).
 4. Per últim emplenem aquells valors nans que hagin quedat amb la mitjana de la seva columna, però només tenint en compte els valors que pertanyin al mateix sector.
 
-
+El següent pas ha estat ajuntar tots els dataset en un (data) per a poder predir a partir de les dades de 4 anys anteriors els valors de les accions de 2018.
 
 ### Model
 | Model | Hiperparametres | Mètrica | Temps |
@@ -56,8 +56,11 @@ El primer que he realiztat ha estat la neteja de les dades donat que es tracta d
 Per tal de fer una prova, es pot fer servir amb la següent comanda
 ``` python3 demo/demo.py --input here ```
 ## Conclusions
-El millor model que s'ha aconseguit ha estat...
-En comparació amb l'estat de l'art i els altres treballs que hem analitzat....
+El millor model que s'ha aconseguit ha estat Gradient Boosting amb un accuracy a les prediccions de 65% que supera el 50% que es demana per a considerar les prediccions d'un model, millor que si es fa de forma aleatòria.
+
+Les mesures de rendibilitat no donen gaire informació sobre les empreses amb les majors variacions positives de preu l'any següent. En general, és important centrar-se en empreses amb EPS positius i passius baixos/actius totals elevats (balanços saludables), així com la quantitat total d'actius qeue tinguin. quests factors només minimitzen el risc de perdre diners, el rendiment passat encara no és una mètrica del tot fiable per al futur
+Es veu clarament que hi ha uns sectors on el rendiment és molt major que en altres (fàcil de veure a l'EDA) i això pot canviar anualment amb els cicles econòmics. Les 5 variables financeres que el model d'aprenentatge automàtic considera importants: EPS, Actius totals, Marge de benefici net i Rendiment del capital.
+
 ## Idees per treballar en un futur
 Crec que seria interesant indagar més en...
 ## Llicencia
