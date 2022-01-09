@@ -52,7 +52,7 @@ El següent pas ha estat ajuntar tots els dataset en un (data) per a poder predi
 | Extra Trees | -- | 74.9515% | 
 | XGB | -- | 74.6333% | 
 | Ada Boost | -- | 74.4866% | 
-| SVM | kernel: lineal C:10 | 72.7967% | 
+| SVM | kernel="rbf", C=0.025, probability=True | 72.7967% | 
 | KNeighbors | -- | 67.6532% | 
 | Gaussian NB | -- | 67.1283% | 
 | Quadratic Discriminant Analysis| -- | 66.2118% | 
