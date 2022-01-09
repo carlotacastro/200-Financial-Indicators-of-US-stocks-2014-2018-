@@ -63,5 +63,4 @@ Es veu clarament que hi ha uns sectors on el rendiment és molt major que en alt
 
 ## Idees per treballar en un futur
 Crec que seria interesant indagar més en fer sèries temporals. També considero que podria ser interessant en un futur buscar més informació dels datasets en general ja que trobo que desprès de fer el data cleaning, no hi havia suficient data com per a poder treure unes conclusions precises, en especial per a l'análisis financer
-## Llicencia
-El projecte s’ha desenvolupat sota llicència ZZZz.
+
