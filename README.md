@@ -35,7 +35,14 @@ L'objectiu del dataset és aprendre a predir si una acció de la borse americana
 ## Experiments
 Durant aquesta pràctica hem realitzat diferents experiments.
 ### Preprocessat
-Quines proves hem realitzat que tinguin a veure amb el pre-processat? com han afectat als resultats?
+El primer que he realiztat ha estat la neteja de les dades donat que es tracta d'un dataset molt extens. Per a portar aquesta acció a terme he realitzat diferent mètodes:
+1. El primer que fem es mrar PREU VAR % per tal de veure quines accions han tingut un creixement inorgànic de més de 500% i els eliminem.
+2. Eliminem aquells valors que siguin buits(nans més del 50%) o tinguing una gran quantitat de zeros (més del 60% en el nostre cas)
+3. Ens encarreguem també de les dades amb valors extrems (outliers).
+4. Per últim emplenem aquells valors nans que hagin quedat amb la mitjana de la seva columna, però només tenint en compte els valors que pertanyin al mateix sector.
+
+
+
 ### Model
 | Model | Hiperparametres | Mètrica | Temps |
 | -- | -- | -- | -- |
