@@ -46,12 +46,32 @@ El següent pas ha estat ajuntar tots els dataset en un (data) per a poder predi
 ### Model
 | Model | Hiperparametres | Mètrica | Temps |
 | -- | -- | -- | -- |
-| [Random Forest](link) | 100 Trees, XX | 57% | 100ms |
-| Random Forest | 1000 Trees, XX | 58% | 1000ms |
-| SVM | kernel: lineal C:10 | 58% | 200ms |
-| -- | -- | -- | -- |
-| [model de XXX](link al kaggle) | XXX | 58% | ?ms |
-| [model de XXX](link al kaggle) | XXX | 62% | ?ms |
+| Gradient Boosting | learning_rate=0.001,n_estimators=250, max_depth=2, min_samples_split=2, min_samples_leaf=1,max_features=2, random_state=10 | 75.4919% | 
+| LGBM | n_estimators=10000,
+        learning_rate = 0.0505,
+        num_leaves = 2740,
+        max_depth = 6,
+        min_data_in_leaf = 200,
+        lambda_l1 = 5,
+        lambda_l2 = 5,
+        min_gain_to_split=0.609299,
+        bagging_fraction = 0.4,
+        bagging_freq = 1,
+        feature_fraction= 0.7,
+        metric = "auc" | 78.8064% |
+| Random Forest | -- | 75.2190% | 
+| Extra Trees | -- | 74.9515% | 
+| XGB | -- | 74.6333% | 
+| Ada Boost | -- | 74.4866% | 
+| SVM | kernel: lineal C:10 | 72.7967% | 
+| KNeighbors | -- | 67.6532% | 
+| Gaussian NB | -- | 67.1283% | 
+| Quadratic Discriminant Analysis| -- | 66.2118% | 
+| Linear Discriminant Analysis | -- | 62.2901% | 
+| Logistic Regression | -- | 62.2631% | 
+| SGD | -- | 61.4539% | 
+| Decision Tree | -- | 60.0532% | 
+
 ## Demo
 Per tal de fer una prova, es pot fer servir amb la següent comanda
 ``` python3 demo/demo.py --input here ```
