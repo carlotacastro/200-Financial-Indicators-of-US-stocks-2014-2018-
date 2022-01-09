@@ -44,7 +44,7 @@ El primer que he realiztat ha estat la neteja de les dades  de cadascun dels dat
 El següent pas ha estat ajuntar tots els dataset en un (data) per a poder predir a partir de les dades de 4 anys anteriors els valors de les accions de 2018.
 
 ### Model
-| Model | Hiperparametres | Mètrica 
+| Model | Hiperparametres | Mètrica |  
 | -- | -- | -- | -- |
 | Gradient Boosting | learning_rate=0.001,n_estimators=250, max_depth=2, min_samples_split=2, min_samples_leaf=1,max_features=2, random_state=10 | 75.4919% | 
 | LGBM | n_estimators=10000, learning_rate = 0.0505, num_leaves = 2740, max_depth = 6, min_data_in_leaf = 200, lambda_l1 = 5, lambda_l2 = 5, min_gain_to_split=0.609299, bagging_fraction = 0.4, bagging_freq = 1, feature_fraction= 0.7, metric = "auc" | 78.8064% |
