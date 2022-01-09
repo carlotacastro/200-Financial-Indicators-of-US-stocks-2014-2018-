@@ -62,6 +62,6 @@ Les mesures de rendibilitat no donen gaire informació sobre les empreses amb le
 Es veu clarament que hi ha uns sectors on el rendiment és molt major que en altres (fàcil de veure a l'EDA) i això pot canviar anualment amb els cicles econòmics. Les 5 variables financeres que el model d'aprenentatge automàtic considera importants: EPS, Actius totals, Marge de benefici net i Rendiment del capital.
 
 ## Idees per treballar en un futur
-Crec que seria interesant indagar més en...
+Crec que seria interesant indagar més en fer sèries temporals. També considero que podria ser interessant en un futur buscar més informació dels datasets en general ja que trobo que desprès de fer el data cleaning, no hi havia suficient data com per a poder treure unes conclusions precises, en especial per a l'análisis financer
 ## Llicencia
 El projecte s’ha desenvolupat sota llicència ZZZz.
