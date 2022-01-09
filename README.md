@@ -56,7 +56,9 @@ El següent pas ha estat ajuntar tots els dataset en un (data) per a poder predi
 Per tal de fer una prova, es pot fer servir amb la següent comanda
 ``` python3 demo/demo.py --input here ```
 ## Conclusions
-El millor model que s'ha aconseguit ha estat Gradient Boosting amb un accuracy a les prediccions de 65% que supera el 50% que es demana per a considerar les prediccions d'un model, millor que si es fa de forma aleatòria.
+El millor model que s'ha aconseguit ha estat Gradient Boosting amb un accuracy a les prediccions de 65% que supera el 50% que es demana per a considerar les prediccions d'un model, millor que si es fa de forma aleatòria. Això tenint en compte les nostres dades estandaritzades ja que en un principi es va fer una comparativa amb dataset sense estadaritzar on el millor classificador es tractava de la regressió logística i s'aconseguien unes prediccions molt similars i fins i tot millors en alguns aspectes. Tot i així, es va procedir amb la estadarització de les dades ja que es considera el procediment més correcte donat el dataset i la classificació que es vol portar a terme. 
+
+Desprès d'aplcicar la búsqueda dels millors hiperparàmetres per als dos millors classificadors (GradientBoosting y LGBM) trobem que en el millor procediment és el Gradient Boosting ja que la seva precisió a la predicció és més òptima.
 
 Les mesures de rendibilitat no donen gaire informació sobre les empreses amb les majors variacions positives de preu l'any següent. En general, és important centrar-se en empreses amb EPS positius i passius baixos/actius totals elevats (balanços saludables), així com la quantitat total d'actius qeue tinguin. quests factors només minimitzen el risc de perdre diners, el rendiment passat encara no és una mètrica del tot fiable per al futur
 Es veu clarament que hi ha uns sectors on el rendiment és molt major que en altres (fàcil de veure a l'EDA) i això pot canviar anualment amb els cicles econòmics. Les 5 variables financeres que el model d'aprenentatge automàtic considera importants: EPS, Actius totals, Marge de benefici net i Rendiment del capital.
