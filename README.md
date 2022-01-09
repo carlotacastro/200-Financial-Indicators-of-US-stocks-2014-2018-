@@ -4,11 +4,11 @@
 ### URL: [kaggle] https://www.kaggle.com/cnic92/200-financial-indicators-of-us-stocks-20142018/code
 ## Resum
 El datatset total està format per 5 datasets en format .csv:
-2014_Financial_Data.csv
-2015_Financial_Data.csv
-2016_Financial_Data.csv
-2017_Financial_Data.csv
-2018_Financial_Data.csv
+- 2014_Financial_Data.csv
+- 2015_Financial_Data.csv
+- 2016_Financial_Data.csv
+- 2017_Financial_Data.csv
+- 2018_Financial_Data.csv
 
 Cada conjunt de dades conté més de 200 indicadors financers (en total 225), que es troben habitualment en els documents de 10.000 que cada empresa cotitza en borsa publica anualment, per a una gran quantitat d'accions dels EUA (de mitjana, s'inclouen 4.000 accions a cada conjunt de dades).
 
