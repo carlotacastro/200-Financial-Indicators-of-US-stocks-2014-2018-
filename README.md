@@ -62,8 +62,7 @@ El següent pas ha estat ajuntar tots els dataset en un (data) per a poder predi
 | Decision Tree | -- | 60.0532% | 
 
 ## Demo
-Per tal de fer una prova, es pot fer servir amb la següent comanda
-``` python3 demo/demo.py --input here ```
+Es troba dins del fitxer demo.ipynb.
 ## Conclusions
 El millor model que s'ha aconseguit ha estat Gradient Boosting amb un accuracy a les prediccions de 65% que supera el 50% que es demana per a considerar les prediccions d'un model, millor que si es fa de forma aleatòria. Això tenint en compte les nostres dades estandaritzades ja que en un principi es va fer una comparativa amb dataset sense estadaritzar on el millor classificador es tractava de la regressió logística i s'aconseguien unes prediccions molt similars i fins i tot millors en alguns aspectes. Tot i així, es va procedir amb la estadarització de les dades ja que es considera el procediment més correcte donat el dataset i la classificació que es vol portar a terme. 
 
