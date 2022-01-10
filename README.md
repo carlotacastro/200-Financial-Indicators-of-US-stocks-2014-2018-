@@ -23,21 +23,21 @@ Observacions importants sobre els conjunts de dades:
 4. La penúltima columna, PREU VAR [%], mostra el percentatge de variació del preu de cada acció durant l'any. Per exemple, si tenim en compte el conjunt de dades 2015_Financial_Data.csv, tindrem:
 
   - Més de 200 indicadors financers per a l'any 2015;
-  - Variació del preu per cent per a l'any 2016 (és a dir, des del primer dia de negociació del gener de         2016 fins a l'últim dia de negociació del desembre de 2016).
+  - Variació del preu per cent per a l'any 2016 (és a dir, des del primer dia de negociació del gener de 2016 fins a l'últim dia de negociació del desembre de 2016).
 
 5. L'última columna, classe, enumera una classificació binària per a cada estoc, on
   - Per a cada acció, si el valor de PREU VAR [%] és positiu, classe = 1. Des d'una perspectiva comercial, l'1 identifica aquelles accions que un comerciant hipotètic hauria de COMPRAR a principis d'any i vendre al final de l'any. Si pel contrari  el valor del PREU VAR [%] és negatiu, classe = 0. Des d'una perspectiva comercial, el 0 identifica aquelles accions que un comerciant hipotètic NO hauria de COMPRAR, ja que el seu valor disminuirà, és a dir, una pèrdua de capital.
 
-Les dades no es torbaben normalitzades i va estar un procès a afegir, tot i que desprès de diferents probes no va semblar afectar el resultat de predicció. 
+Les dades no es trobaven normalitzades i va estar un procés a afegir, tot i que després de diferents probes no va semblar afectar el resultat de predicció. 
 
 ### Objectius del dataset
-L'objectiu del dataset és aprendre a predir si una acció de la borse americana és una bona compra o no, mitjançant l'anlàisi del rendiment de l'empresa i amb uns indicadors estàndards. Per a arribar a aquestes conclusions, l'autor ens proporciona una sèrie d'atributs molt extensa com ara el sector al que pertany cada acció, la quantitat de deute de l'empresa, així com el percentatge de variació del preu de cada acció durant l'any. 
+L'objectiu del dataset és aprendre a predir si una acció de la borsa americana és una bona compra o no, mitjançant l'anàlisi del rendiment de l'empresa i amb uns indicadors estàndards. Per a arribar a aquestes conclusions, l'autor ens proporciona una sèrie d'atributs molt extensa com ara el sector al que pertany cada acció, la quantitat de deute de l'empresa, així com el percentatge de variació del preu de cada acció durant l'any. 
 ## Experiments
 Durant aquesta pràctica hem realitzat diferents experiments.
 ### Preprocessat
-El primer que he realiztat ha estat la neteja de les dades  de cadascun dels datasets per separat donat que es tracta d'un dataset molt extens. Per a portar aquesta acció a terme he realitzat diferent mètodes:
-1. El primer que fem es mrar PREU VAR % per tal de veure quines accions han tingut un creixement inorgànic de més de 500% i els eliminem.
-2. Eliminem aquells valors que siguin buits(nans més del 50%) o tinguing una gran quantitat de zeros (més del 60% en el nostre cas)
+El primer que he realitzat  ha estat la neteja de les dades  de cadascun dels datasets per separat donat que es tracta d'un dataset molt extens. Per a portar aquesta acció a terme he realitzat diferent mètodes:
+1. El primer que fem es mirar PREU VAR % per tal de veure quines accions han tingut un creixement inorgànic de més de 500% i els eliminem.
+2. Eliminem aquells valors que siguin buits(nans més del 50%) o tinguin  una gran quantitat de zeros (més del 60% en el nostre cas)
 3. Ens encarreguem també de les dades amb valors extrems (outliers).
 4. Per últim emplenem aquells valors nans que hagin quedat amb la mitjana de la seva columna, però només tenint en compte els valors que pertanyin al mateix sector.
 
@@ -64,13 +64,13 @@ El següent pas ha estat ajuntar tots els dataset en un (data) per a poder predi
 ## Demo
 Es troba dins del fitxer demo.ipynb.
 ## Conclusions
-El millor model que s'ha aconseguit ha estat Gradient Boosting amb un accuracy a les prediccions de 65% que supera el 50% que es demana per a considerar les prediccions d'un model, millor que si es fa de forma aleatòria. Això tenint en compte les nostres dades estandaritzades ja que en un principi es va fer una comparativa amb dataset sense estadaritzar on el millor classificador es tractava de la regressió logística i s'aconseguien unes prediccions molt similars i fins i tot millors en alguns aspectes. Tot i així, es va procedir amb la estadarització de les dades ja que es considera el procediment més correcte donat el dataset i la classificació que es vol portar a terme. 
+El millor model que s'ha aconseguit ha estat Gradient Boosting amb un accuracy a les prediccions de 65% que supera el 50% que es demana per a considerar les prediccions d'un model, millor que si es fa de forma aleatòria. Això tenint en compte les nostres dades estandarditzades  ja que en un principi es va fer una comparativa amb dataset sense estadaritzar on el millor classificador es tractava de la regressió logística i s'aconseguien unes prediccions molt similars i fins i tot millors en alguns aspectes. Tot i així, es va procedir amb la estandardització  de les dades ja que es considera el procediment més correcte donat el dataset i la classificació que es vol portar a terme. 
 
-Desprès d'aplcicar la búsqueda dels millors hiperparàmetres per als tres millors classificadors (GradientBoosting, LGBM i Random Forest) trobem que en el millor procediment és el Gradient Boosting ja que la seva precisió a la predicció és més òptima.
+Després d'aplicar la búsqueda dels millors hiperparàmetres per als tres millors classificadors (GradientBoosting, LGBM i Random Forest) trobem que en el millor procediment és el Gradient Boosting ja que la seva precisió a la predicció és més òptima.
 
-Les mesures de rendibilitat no donen gaire informació sobre les empreses amb les majors variacions positives de preu l'any següent. En general, és important centrar-se en empreses amb EPS positius i passius baixos/actius totals elevats (balanços saludables), així com la quantitat total d'actius qeue tinguin. quests factors només minimitzen el risc de perdre diners, el rendiment passat encara no és una mètrica del tot fiable per al futur
+Les mesures de rendibilitat no donen gaire informació sobre les empreses amb les majors variacions positives de preu l'any següent. En general, és important centrar-se en empreses amb EPS positius i passius baixos/actius totals elevats (balanços saludables), així com la quantitat total d'actius que tinguin. Aquests factors només minimitzen el risc de perdre diners, el rendiment passat encara no és una mètrica del tot fiable per al futur
 Es veu clarament que hi ha uns sectors on el rendiment és molt major que en altres (fàcil de veure a l'EDA) i això pot canviar anualment amb els cicles econòmics. Les 5 variables financeres que el model d'aprenentatge automàtic considera importants: EPS, Actius totals, Marge de benefici net i Rendiment del capital.
 
 ## Idees per treballar en un futur
-Crec que seria interesant indagar més en fer sèries temporals. També considero que podria ser interessant en un futur buscar més informació dels datasets en general ja que trobo que desprès de fer el data cleaning, no hi havia suficient data com per a poder treure unes conclusions precises, en especial per a l'análisis financer
+Crec que seria interessant indagar més en fer sèries temporals. També considero que podría ser interessant en un futur buscar més informació dels datasets en general ja que trobo que després de fer el data cleaning, no hi havia suficient data com per a poder treure unes conclusions precises, en especial per a l'análisis financer
 
