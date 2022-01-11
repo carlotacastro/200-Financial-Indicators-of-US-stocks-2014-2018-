@@ -64,7 +64,7 @@ El següent pas ha estat ajuntar tots els dataset en un (data) per a poder predi
 ## Demo
 Es troba dins del fitxer demo.ipybn
 
-##A nàlisi financer
+## Anàlisi financer
 A l'arxiu Financial_Analysis.ipybn es troba un anàlisi de 3 empreses del dataset: P&G, GSM i HUN. Fem un anàlisi del seu deute, dels ràtios financers i mirem el seu balanços. Després de fer una anàlisi detallat podem extreure que no és una bona idea invertir en stocks de l'empresa HUN ja que té una quantitat de actius totals poc elevada i un gran ràtio de deute (especialment si ho comparem amb les altres empresas que es troben molt sanejades i amb una liquidesa molt elevada).
 
 ## Conclusions
