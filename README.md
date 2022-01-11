@@ -62,7 +62,11 @@ El següent pas ha estat ajuntar tots els dataset en un (data) per a poder predi
 | Decision Tree | -- | 60.0532% | 
 
 ## Demo
-Es troba dins del fitxer demo.ipynb.
+Es troba dins del fitxer demo.ipybn
+
+##Anàlisi financer
+A l'arxiu Financial_Analysis.ipybn es troba un anàlisi de 3 empreses del dataset: P&G, GSM i HUN. Fem un anàlisi del seu deute, dels ràtios financers i mirem el seu balanços. Després de fer una anàlisi detallat podem extreure que no és una bona idea invertir en stocks de l'empresa HUN ja que té una quantitat de actius totals poc elevada i un gran ràtio de deute (especialment si ho comparem amb les altres empresas que es troben molt sanejades i amb una liquidesa molt elevada).
+
 ## Conclusions
 El millor model que s'ha aconseguit ha estat Gradient Boosting amb un accuracy a les prediccions de 65% que supera el 50% que es demana per a considerar les prediccions d'un model, millor que si es fa de forma aleatòria. Això tenint en compte les nostres dades estandarditzades  ja que en un principi es va fer una comparativa amb dataset sense estadaritzar on el millor classificador es tractava de la regressió logística i s'aconseguien unes prediccions molt similars i fins i tot millors en alguns aspectes. Tot i així, es va procedir amb la estandardització  de les dades ja que es considera el procediment més correcte donat el dataset i la classificació que es vol portar a terme. 
 
